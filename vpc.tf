@@ -1,6 +1,4 @@
-variable "vpc_name" {
-  default = ""
-}
+
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
   name = "var.VPC_NAME"
@@ -19,6 +17,6 @@ module "vpc" {
   }
 
   vpc_tags = {
-    name =var.vpc_name
+    name =var.VPC_NAME
       }
   }
